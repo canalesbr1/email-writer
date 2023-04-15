@@ -10,4 +10,16 @@
     <h1>
         Potential Client E-mail Responder
     </h1>
+    <form method = "post"></form>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name ="usertext"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" value = "yea">Yes</button>
+        <button type="submit" class="btn btn-primary" value = "no">No</button>
+    </form>
+
+    {% if data %}
+        <div class="resultc mt-4">{{ result }}</div>
+    {% endif %}
 </body>

@@ -1,10 +1,17 @@
 from flask import Flask, render_template, request, redirect, url_for
 
-app = flask(__name__)
+app = Flask(__name__)
 
 @app.route('/',methods = ("GET","POST"))
 def index():
-    return render_template("index.html")
+    if request.method == "POST":
+        field = request.form["usertext"]
+    result = requests.args.get("resultc")
+    return render_template("index.html",result = result)
 
-if __main__ == __name__ :
+if __name__ == '__main__' :
     app.run();
+
+
+def promptgen(text):
+    return text
